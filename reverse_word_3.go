@@ -2,27 +2,33 @@ package rws
 
 func reverseWord(s string) string {
 	var result string = ""
-	lastStrIndex := -1
+	var reverseIndex int = -1
 
-	for strIndex := 0; strIndex < len(s); strIndex++ {
-		var lastIndexPosition int // last element of string
+	// len(s) - 1 ultimo valor do array index
+	for rightIndex := 0; rightIndex < len(s); rightIndex++ { // 1,2,3,4,5,6
+		if rightIndex == len(s)-1 || s[rightIndex] == ' ' {
+			// diminuir o array de string
+			var leftIndex int
 
-		if strIndex == len(s)-1 || s[strIndex] == ' ' {
-			if strIndex == len(s)-1 {
-				lastIndexPosition = strIndex
-			} else {
-				lastIndexPosition = strIndex - 1
+			if rightIndex == len(s)-1 {
+				leftIndex = rightIndex // ultimo index da string
 			}
 
-			for _ = 0; lastIndexPosition > lastStrIndex; lastIndexPosition-- {
-				result += string(s[lastIndexPosition])
+			if s[rightIndex] == ' ' {
+				leftIndex = rightIndex - 1 // ultimo index da string se tiver espaço
 			}
 
-			if strIndex != len(s)-1 {
-				result += " "
+			// jogar o leftIndex para prox posiçao da string
+			// atribuir valor ao result
+			for _ = 0; leftIndex > reverseIndex; leftIndex-- {
+				result += string(s[leftIndex])
 			}
 
-			lastStrIndex = strIndex
+			if rightIndex != len(s)-1 {
+				result += " " // adiciona espaço entre palavras
+			}
+
+			reverseIndex = rightIndex
 		}
 	}
 
