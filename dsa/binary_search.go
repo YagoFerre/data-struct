@@ -12,7 +12,7 @@ func search(nums []int, target int) int {
 		}
 
 		if nums[midIndex] < target {
-			leftIndex = midIndex + 1
+			leftIndex = midIndex + 1 // descartando ate mesmo o mid index
 		}
 
 		if nums[midIndex] > target {
