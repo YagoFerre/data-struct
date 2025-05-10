@@ -27,5 +27,5 @@ func ExponentialSearch(nums []int, target int) int {
 		return rightIndex
 	}
 
-	return Search(nums[startSubArr:endSubArr], target)
+	return Search(nums, target, startSubArr, endSubArr)
 }

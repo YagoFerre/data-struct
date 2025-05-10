@@ -1,9 +1,6 @@
 package structure
 
-func Search(nums []int, target int) int {
-	var rightIndex int = len(nums) - 1
-	var leftIndex int = 0
-
+func Search(nums []int, target int, leftIndex int, rightIndex int) int {
 	for leftIndex <= rightIndex {
 		var midIndex int = (leftIndex + rightIndex) / 2
 
