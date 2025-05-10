@@ -20,12 +20,10 @@ func ExponentialSearch(nums []int, target int) int {
 		rightIndex = arrSize - 1
 	}
 
-	endSubArr := rightIndex
-
 	// se for o ultimo
 	if nums[rightIndex] == target {
 		return rightIndex
 	}
 
-	return Search(nums, target, startSubArr, endSubArr)
+	return Search(nums, target, startSubArr, rightIndex)
 }
