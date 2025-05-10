@@ -1,6 +1,6 @@
-package dsa
+package structure
 
-func search(nums []int, target int) int {
+func Search(nums []int, target int) int {
 	var rightIndex int = len(nums) - 1
 	var leftIndex int = 0
 

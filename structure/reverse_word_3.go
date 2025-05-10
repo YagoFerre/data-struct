@@ -1,6 +1,6 @@
-package dsa
+package structure
 
-func reverseWord(s string) string {
+func ReverseWord(s string) string {
 	var result string = ""
 	var reverseIndex int = -1
 

@@ -1,6 +1,6 @@
-package dsa
+package structure
 
-func maximumLengthSubstring(s string) int {
+func MaximumLengthSubstring(s string) int {
 	var rightIndex int = 0
 	var leftIndex int = 0
 	var lenTotal int = 1

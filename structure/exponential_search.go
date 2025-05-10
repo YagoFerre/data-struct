@@ -1,6 +1,6 @@
-package dsa
+package structure
 
-func exponentialSearch(nums []int, target int) int {
+func ExponentialSearch(nums []int, target int) int {
 	// se for o primeiro
 	if nums[0] == target {
 		return 0
@@ -15,17 +15,17 @@ func exponentialSearch(nums []int, target int) int {
 	}
 
 	startSubArr := rightIndex / 2
-	endSubArr := rightIndex
 
-	if endSubArr >= arrSize {
-		endSubArr = arrSize
+	if rightIndex >= arrSize {
+		rightIndex = arrSize - 1
 	}
+
+	endSubArr := rightIndex
 
 	// se for o ultimo
 	if nums[rightIndex] == target {
 		return rightIndex
 	}
 
-	// maybe i can use binary search here, but...
-	return search(nums[startSubArr:endSubArr], target)
+	return Search(nums[startSubArr:endSubArr], target)
 }
