@@ -1,7 +1,7 @@
 package structure
 
 func FirstUniqueChar(s string) int {
-	var hashMap = map[string][]int{}
+	var hashMap = map[string][]int{} // PERCORRER UM MAP NÃO É ORDENADO
 
 	// hashMap: {l: [0, 1], e: [1, 2], t: [3, 3]}
 	for idx, ch := range s {
