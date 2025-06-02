@@ -12,10 +12,10 @@ func FirstUniqueChar(s string) int {
 		}
 	}
 
-	// idx _, {l: [0, 1]}
-	for _, hashValue := range hashMap {
-		if hashValue[1] == 1 {
-			return hashValue[0]
+	// percorre string original com hashMap montado
+	for idx, ch := range s {
+		if hashMap[string(ch)][1] == 1 {
+			return idx
 		}
 	}
 
