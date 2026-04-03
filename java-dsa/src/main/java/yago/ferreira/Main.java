@@ -3,9 +3,6 @@ package yago.ferreira;
 import yago.ferreira.linkedlist.MergeTwoSortedLinkedList;
 import yago.ferreira.sort.BubbleSort;
 
-import java.util.ArrayList;
-import java.util.List;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -15,6 +12,5 @@ public class Main {
         MergeTwoSortedLinkedList list = new MergeTwoSortedLinkedList();
         BubbleSort bubbleSort = new BubbleSort();
 
-        bubbleSort.bubble(new int[]{5, 4, 3, 2, 1});
     }
 }
